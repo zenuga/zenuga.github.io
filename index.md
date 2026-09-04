@@ -3,7 +3,7 @@ layout: default
 title: Portfolio | dario
 ---
 
-# Hi, I'm dario 🎮
+# Hi, I'm dario 
 
 **Unity Game Developer | Gameplay Programmer | Creative Problem Solver**
 
@@ -11,13 +11,13 @@ Welcome to my portfolio! I specialize in building immersive and engaging experie
 
 ---
 
-## 🚀 About Me
+##  About Me
 
 I am a game developer based in the Netherlands with a passion for enemy ai and level design. When I'm not tweaking variables in the inspector or squashing bugs, you can find me discovering other games.
 
 ---
 
-## 🛠️ Skills
+##  Skills
 
 * **Engine & Languages:** Unity 3D, C#
 * **Game Development:** Gameplay Programming, UI/UX Implementation, Physics, Animations, State Machines
@@ -26,7 +26,7 @@ I am a game developer based in the Netherlands with a passion for enemy ai and l
 
 ---
 
-## 🕹️ Games & Projects
+##  Games & Projects
 
 ### [Game Title 1] not yet created
 *A brief description of the game, its genre, and the core gameplay loop. Mention if it was a solo project, game jam submission, or team effort.*
@@ -37,7 +37,7 @@ I am a game developer based in the Netherlands with a passion for enemy ai and l
 
 ---
 
-## 📫 Connect with Me
+##  Connect with Me
 
 I'm always open to talking about game design, upcoming game jams, or potential studio opportunities.
 
