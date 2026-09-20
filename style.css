@@ -8,7 +8,6 @@
   --border-color: #2a2a2a;
 }
 
-/* CHANGED: Replaced flat solid dark background with a Unity-style grid and radial ambient lighting */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg-color);
@@ -32,7 +31,6 @@ body {
   padding: 20px;
 }
 
-/* Top Navigation Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -46,7 +44,6 @@ header {
   z-index: 100;
 }
 
-/* CHANGED: Replaced text name with flexible logo styling (image or fallback SVG controller icon) */
 .logo {
   display: flex;
   align-items: center;
@@ -88,7 +85,6 @@ nav a:hover {
   background-color: #2a2a2a;
 }
 
-/* Active Highlight Classes */
 nav a.active-home {
   color: #fff;
   background-color: var(--accent-color);
@@ -104,7 +100,6 @@ nav a.active-contact {
   background-color: var(--accent-color);
 }
 
-/* Glassmorphism Card Styling */
 .card {
   background-color: var(--card-bg);
   backdrop-filter: blur(5px);
@@ -208,4 +203,68 @@ code {
 
 .contact-list a:hover {
   text-decoration: underline;
+}
+
+/* CHANGED: --- NEW CSS FOR THE PROJECT GRID ADDED BELOW --- */
+
+/* The responsive grid container that stacks blocks side by side */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* The individual stackable block */
+.project-block {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover effect to make the block pop out slightly */
+.project-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* The title section on top */
+.project-block h3 {
+  margin: 0;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Link styling inside the block */
+.project-block a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.project-block a:hover h3 {
+  color: var(--unity-green);
+}
+
+/* The image section on the bottom */
+.project-block .image-container {
+  height: 200px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+/* Ensures the image fills the block cleanly without stretching */
+.project-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

@@ -1,0 +1,81 @@
+<!-- CHANGED: Entirely new file created to hold the detailed game info -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Title 1 | Dario</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo" title="Home">
+      <div class="logo-icon-fallback">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="6" width="20" height="12" rx="2"/>
+          <path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"/>
+        </svg>
+      </div>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <!-- We keep portfolio highlighted because this is a sub-page of the portfolio -->
+      <a href="portfolio.html" class="active-portfolio">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div style="margin-bottom: 20px;">
+      <a href="portfolio.html" style="color: var(--unity-green); text-decoration: none;">&larr; Back to Portfolio</a>
+    </div>
+
+    <div class="card">
+      <h1 style="color: #fff; margin-top: 0; border-bottom: 2px solid var(--unity-green); padding-bottom: 10px;">[Game Title 1]</h1>
+      
+      <p><em>A brief description of the game, its genre, and the core gameplay loop. Mention if it was a solo project, game jam submission, or team effort.</em></p>
+      
+      <p><strong>Role:</strong> Lead Programmer</p>
+      <p><strong>Key Features:</strong> Custom character controller, procedural level generation, custom enemy AI</p>
+
+      <h3>Gameplay Media</h3>
+      <div class="media-placeholder">
+        Insert Gameplay Screenshot or GIF Here
+      </div>
+
+      <h3>Technical Highlight (Enemy AI State Machine)</h3>
+      <p>Here is an example of the C# State Machine I built in Unity to handle the enemy AI transitions.</p>
+      <pre><code>public class EnemyAI : MonoBehaviour
+{
+    private enum State { Patrol, Chase }
+    private State currentState;
+    private Transform player;
+
+    void Update()
+    {
+        switch (currentState)
+        {
+            case State.Patrol:
+                PatrolLogic();
+                if (Vector3.Distance(transform.position, player.position) < 5f)
+                    currentState = State.Chase;
+                break;
+
+            case State.Chase:
+                ChasePlayer();
+                break;
+        }
+    }
+}</code></pre>
+
+      <div style="margin-top: 30px;">
+        <a href="https://yourusername.itch.io/game1" class="btn" target="_blank">Play on Itch.io</a>
+        <a href="https://github.com/yourusername/game1" class="btn" target="_blank">View Source Code</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

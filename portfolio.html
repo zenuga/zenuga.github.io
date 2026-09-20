@@ -4,15 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Dario</title>
-  <!-- CHANGED: Linked external style.css stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <!-- CHANGED: Removed "Dario" text and added logo placeholder -->
     <a href="index.html" class="logo" title="Home">
-      <!-- <img src="logo.png" alt="Logo" /> -->
       <div class="logo-icon-fallback">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="2" y="6" width="20" height="12" rx="2"/>
@@ -23,7 +20,6 @@
 
     <nav>
       <a href="index.html">Home</a>
-      <!-- CHANGED: Applied active-portfolio CSS class -->
       <a href="portfolio.html" class="active-portfolio">Portfolio</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -32,48 +28,41 @@
   <div class="container">
     <h1 style="color: #fff; margin-bottom: 25px;">My Projects</h1>
 
-    <div class="card">
-      <h2 style="border-bottom-color: var(--unity-green);">[Game Title 1]</h2>
-      <p><em>A brief description of the game, its genre, and the core gameplay loop. Mention if it was a solo project, game jam submission, or team effort.</em></p>
-      
-      <p><strong>Role:</strong> Lead Programmer</p>
-      <p><strong>Key Features:</strong> Custom character controller, procedural level generation, custom enemy AI</p>
+    <!-- CHANGED: Replaced the large detailed card with a responsive Grid Container -->
+    <div class="project-grid">
 
-      <h3>Gameplay Media</h3>
-      <div class="media-placeholder">
-        Insert Gameplay Screenshot or GIF Here
+      <!-- CHANGED: Project Block 1 (Links to new project-1.html) -->
+      <div class="project-block">
+        <a href="project-1.html">
+          <h3>Game Title 1</h3>
+          <div class="image-container">
+            <!-- Replace this text with an <img> tag later: <img src="thumb1.jpg" alt="Game 1"> -->
+            Image
+          </div>
+        </a>
       </div>
 
-      <h3>Technical Highlight (Enemy AI State Machine)</h3>
-      <pre><code>public class EnemyAI : MonoBehaviour
-{
-    private enum State { Patrol, Chase }
-    private State currentState;
-    private Transform player;
-
-    void Update()
-    {
-        switch (currentState)
-        {
-            case State.Patrol:
-                PatrolLogic();
-                if (Vector3.Distance(transform.position, player.position) < 5f)
-                    currentState = State.Chase;
-                break;
-
-            case State.Chase:
-                ChasePlayer();
-                break;
-        }
-    }
-}</code></pre>
-
-      <div style="margin-top: 20px;">
-        <a href="https://yourusername.itch.io/game1" class="btn" target="_blank">Play on Itch.io</a>
-        <a href="https://github.com/yourusername/game1" class="btn" target="_blank">View Source Code</a>
+      <!-- CHANGED: Project Block 2 (Example of how it stacks) -->
+      <div class="project-block">
+        <a href="#">
+          <h3>Game Title 2</h3>
+          <div class="image-container">
+            Image
+          </div>
+        </a>
       </div>
+
+      <!-- CHANGED: Project Block 3 (Example of how it stacks) -->
+      <div class="project-block">
+        <a href="#">
+          <h3>Game Title 3</h3>
+          <div class="image-container">
+            Image
+          </div>
+        </a>
+      </div>
+
     </div>
-
   </div>
 
 </body>
