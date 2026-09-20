@@ -1,123 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dario | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dario | Unity Game Developer</title>
-  <style>
-    /* Global Styles */
-    :root {
-      --bg-color: #121212;
-      --card-bg: #1e1e1e;
-      --accent-color: #0077b5;
-      --unity-green: #239120;
-      --text-color: #e0e0e0;
-      --text-muted: #a0a0a0;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    /* Top Right Fixed Header Navigation */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background-color: #181818;
-      border-bottom: 1px solid #2a2a2a;
-    }
-    .logo {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #fff;
-    }
-    nav {
-      display: flex;
-      gap: 15px;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--text-muted);
-      padding: 8px 16px;
-      border-radius: 5px;
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    nav a:hover {
-      color: #fff;
-      background-color: #2a2a2a;
-    }
-    /* Highlighted Selected State */
-    nav a.active {
-      color: #fff;
-      background-color: var(--accent-color);
-    }
-
-    /* Hero Banner */
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(180deg, #181818 0%, var(--bg-color) 100%);
-      border-radius: 8px;
-      margin-bottom: 30px;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #fff;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-    }
-
-    /* Content Cards */
-    .card {
-      background-color: var(--card-bg);
-      padding: 25px;
-      border-radius: 8px;
-      margin-bottom: 25px;
-      border: 1px solid #2a2a2a;
-    }
-    h2 {
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 8px;
-      margin-top: 0;
-      color: #fff;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 8px;
-    }
-  </style>
+  <!-- CHANGED: Linked external style.css stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Top Navigation Header -->
   <header>
-    <div class="logo">Dario</div>
+    <!-- CHANGED: Removed "Dario" text on top left and replaced with an image/SVG logo placeholder -->
+    <a href="index.html" class="logo" title="Home">
+      <!-- To use your own image file, replace logo.png below with your file path: e.g. src="images/my-logo.png" -->
+      <!-- <img src="logo.png" alt="Logo" /> -->
+      
+      <!-- SVG Fallback Logo (Game Controller Icon) -->
+      <div class="logo-icon-fallback">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="6" width="20" height="12" rx="2"/>
+          <path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"/>
+        </svg>
+      </div>
+    </a>
+
     <nav>
-      <!-- CHANGED: Active page gets the .active class to highlight it in blue -->
-      <a href="index.html" class="active">Home</a>
+      <!-- CHANGED: Applied active-home CSS class -->
+      <a href="index.html" class="active-home">Home</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -125,20 +34,17 @@
 
   <div class="container">
     
-    <!-- Hero Section -->
     <section class="hero">
       <h1>Hi, I'm Dario</h1>
       <p><strong>Unity Game Developer | Gameplay Programmer | Creative Problem Solver</strong></p>
       <p style="max-width: 600px; margin: 15px auto 0;">Welcome to my portfolio! I specialize in building immersive and engaging experiences using Unity and C#. From prototyping mechanics to polishing the final build, I love bringing digital worlds to life.</p>
     </section>
 
-    <!-- About Me Section -->
     <section class="card">
       <h2>About Me</h2>
       <p>I am a game developer based in the Netherlands with a passion for enemy AI and level design. When I'm not tweaking variables in the inspector or squashing bugs, you can find me discovering other games.</p>
     </section>
 
-    <!-- Skills Section -->
     <section class="card">
       <h2>Skills</h2>
       <ul>
