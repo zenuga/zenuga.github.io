@@ -1,0 +1,89 @@
+:root {
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --accent-color: #0077b5;
+  --unity-green: #239120;
+  --text-color: #e0e0e0;
+  --text-muted: #a0a0a0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Top Header Bar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #181818;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #2a2a2a;
+}
+
+/* Active Button Highlights */
+nav a.active-home {
+  color: #fff;
+  background-color: var(--accent-color);
+}
+
+nav a.active-portfolio {
+  color: #fff;
+  background-color: var(--unity-green);
+}
+
+nav a.active-contact {
+  color: #fff;
+  background-color: var(--accent-color);
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border: 1px solid #2a2a2a;
+}
+
+h2 {
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 8px;
+  margin-top: 0;
+  color: #fff;
+}
