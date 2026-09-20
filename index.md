@@ -3,6 +3,15 @@ layout: default
 title: Portfolio | dario
 ---
 
+<!-- NEW ADDITION: Navigation Buttons linking to your new pages -->
+<div align="center">
+  <a href="./index.md"><img src="https://img.shields.io/badge/Home-100000?style=for-the-badge&logo=homeassistant&logoColor=white" alt="Home" /></a>
+  <a href="./portfolio.md"><img src="https://img.shields.io/badge/Portfolio-239120?style=for-the-badge&logo=unity&logoColor=white" alt="Portfolio" /></a>
+  <a href="./contact.md"><img src="https://img.shields.io/badge/Contact-0077B5?style=for-the-badge&logo=minutemailer&logoColor=white" alt="Contact" /></a>
+</div>
+
+<br>
+
 # Hi, I'm dario 
 
 **Unity Game Developer | Gameplay Programmer | Creative Problem Solver**
@@ -13,7 +22,7 @@ Welcome to my portfolio! I specialize in building immersive and engaging experie
 
 ##  About Me
 
-I am a game developer based in the Netherlands with a passion for enemy ai and level design. When I'm not tweaking variables in the inspector or squashing bugs, you can find me discovering other games.
+I am a game developer based in the Netherlands with a passion for enemy AI and level design. When I'm not tweaking variables in the inspector or squashing bugs, you can find me discovering other games.
 
 ---
 
@@ -21,27 +30,7 @@ I am a game developer based in the Netherlands with a passion for enemy ai and l
 
 * **Engine & Languages:** Unity 3D, C#
 * **Game Development:** Gameplay Programming, UI/UX Implementation, Physics, Animations, State Machines
-* **Tools & Software:** Git/GitHub, Visual Studio, Blender, Unity
+* **Tools & Software:** Git/GitHub, Visual Studio, Blender
 * **Currently Learning:** Unity
 
----
-
-##  Games & Projects
-
-### [Game Title 1] not yet created
-*A brief description of the game, its genre, and the core gameplay loop. Mention if it was a solo project, game jam submission, or team effort.*
-* **Role:** [e.g., Lead Programmer, Solo Developer]
-* **Key Features:** [e.g., Custom character controller, procedural level generation, custom enemy AI]
-* [Play on Itch.io](https://yourusername.itch.io/game1) | [View Source Code](https://github.com/yourusername/game1)
-
-
----
-
-##  Connect with Me
-
-I'm always open to talking about game design, upcoming game jams, or potential studio opportunities.
-
-* **Itch.io:** https://zenuga.itch.io/
-* **GitHub:** https://github.com/zenuga
-* **LinkedIn:** linkedin.com/in/dario-cloin-34315142b
-* **Email:** dariocloin@gmail.com
+<!-- CHANGED: Removed "Games & Projects" and "Connect with Me" from here, as they are now on their own dedicated pages -->
