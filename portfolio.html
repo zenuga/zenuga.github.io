@@ -4,137 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Dario</title>
-  <style>
-    :root {
-      --bg-color: #121212;
-      --card-bg: #1e1e1e;
-      --unity-green: #239120;
-      --text-color: #e0e0e0;
-      --text-muted: #a0a0a0;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background-color: #181818;
-      border-bottom: 1px solid #2a2a2a;
-    }
-    .logo {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #fff;
-    }
-    nav {
-      display: flex;
-      gap: 15px;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--text-muted);
-      padding: 8px 16px;
-      border-radius: 5px;
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    nav a:hover {
-      color: #fff;
-      background-color: #2a2a2a;
-    }
-    /* Highlighted Selected State for Portfolio */
-    nav a.active {
-      color: #fff;
-      background-color: var(--unity-green);
-    }
-
-    .card {
-      background-color: var(--card-bg);
-      padding: 25px;
-      border-radius: 8px;
-      margin-bottom: 25px;
-      border: 1px solid #2a2a2a;
-    }
-    h2 {
-      border-bottom: 2px solid var(--unity-green);
-      padding-bottom: 8px;
-      margin-top: 0;
-      color: #fff;
-    }
-    .media-placeholder {
-      width: 100%;
-      height: 350px;
-      background-color: #2a2a2a;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      margin: 15px 0;
-      border: 1px dashed #444;
-    }
-    pre {
-      background-color: #111;
-      padding: 15px;
-      border-radius: 6px;
-      overflow-x: auto;
-      border: 1px solid #333;
-    }
-    code {
-      color: #4ec9b0;
-      font-family: 'Consolas', monospace;
-    }
-    .btn {
-      display: inline-block;
-      padding: 8px 16px;
-      background-color: #333;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-      margin-right: 10px;
-    }
-    .btn:hover {
-      background-color: #444;
-    }
-  </style>
+  <!-- CHANGED: Linked external style.css stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <div class="logo">Dario</div>
+    <!-- CHANGED: Removed "Dario" text and added logo placeholder -->
+    <a href="index.html" class="logo" title="Home">
+      <!-- <img src="logo.png" alt="Logo" /> -->
+      <div class="logo-icon-fallback">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="6" width="20" height="12" rx="2"/>
+          <path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"/>
+        </svg>
+      </div>
+    </a>
+
     <nav>
       <a href="index.html">Home</a>
-      <!-- CHANGED: Active highlight set on Portfolio -->
-      <a href="portfolio.html" class="active">Portfolio</a>
+      <!-- CHANGED: Applied active-portfolio CSS class -->
+      <a href="portfolio.html" class="active-portfolio">Portfolio</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <div class="container">
-    <h1 style="color: #fff;">My Projects</h1>
+    <h1 style="color: #fff; margin-bottom: 25px;">My Projects</h1>
 
     <div class="card">
-      <h2>[Game Title 1]</h2>
+      <h2 style="border-bottom-color: var(--unity-green);">[Game Title 1]</h2>
       <p><em>A brief description of the game, its genre, and the core gameplay loop. Mention if it was a solo project, game jam submission, or team effort.</em></p>
       
       <p><strong>Role:</strong> Lead Programmer</p>
       <p><strong>Key Features:</strong> Custom character controller, procedural level generation, custom enemy AI</p>
 
       <h3>Gameplay Media</h3>
-      <!-- CHANGED: Replace this div with an <img src="your_screenshot.gif" width="100%"> when ready -->
       <div class="media-placeholder">
         Insert Gameplay Screenshot or GIF Here
       </div>
