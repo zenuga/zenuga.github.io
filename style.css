@@ -1,19 +1,29 @@
 :root {
-  --bg-color: #121212;
-  --card-bg: #1e1e1e;
+  --bg-color: #0e1117;
+  --card-bg: rgba(30, 30, 30, 0.75);
   --accent-color: #0077b5;
   --unity-green: #239120;
   --text-color: #e0e0e0;
   --text-muted: #a0a0a0;
+  --border-color: #2a2a2a;
 }
 
+/* CHANGED: Replaced flat solid dark background with a Unity-style grid and radial ambient lighting */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg-color);
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(35, 145, 32, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(0, 119, 181, 0.15) 0%, transparent 45%),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 35px 35px, 35px 35px;
+  background-attachment: fixed;
   color: var(--text-color);
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 .container {
@@ -22,20 +32,41 @@ body {
   padding: 20px;
 }
 
-/* Top Header Bar */
+/* Top Navigation Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background-color: #181818;
-  border-bottom: 1px solid #2a2a2a;
+  padding: 15px 40px;
+  background-color: rgba(24, 24, 24, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
+/* CHANGED: Replaced text name with flexible logo styling (image or fallback SVG controller icon) */
 .logo {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-icon-fallback {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, var(--unity-green), var(--accent-color));
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav {
@@ -57,7 +88,7 @@ nav a:hover {
   background-color: #2a2a2a;
 }
 
-/* Active Button Highlights */
+/* Active Highlight Classes */
 nav a.active-home {
   color: #fff;
   background-color: var(--accent-color);
@@ -73,12 +104,35 @@ nav a.active-contact {
   background-color: var(--accent-color);
 }
 
+/* Glassmorphism Card Styling */
 .card {
   background-color: var(--card-bg);
+  backdrop-filter: blur(5px);
   padding: 25px;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-bottom: 25px;
-  border: 1px solid #2a2a2a;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(24, 24, 24, 0.6);
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border: 1px solid var(--border-color);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
 }
 
 h2 {
@@ -86,4 +140,72 @@ h2 {
   padding-bottom: 8px;
   margin-top: 0;
   color: #fff;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.media-placeholder {
+  width: 100%;
+  height: 350px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  margin: 15px 0;
+  border: 1px dashed #444;
+}
+
+pre {
+  background-color: #0b0d10;
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+  border: 1px solid #222;
+}
+
+code {
+  color: #4ec9b0;
+  font-family: 'Consolas', monospace;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-right: 10px;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background-color: #3a3a3a;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.contact-list a {
+  color: #4da6ff;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
 }
