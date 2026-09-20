@@ -4,107 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Dario</title>
-  <style>
-    :root {
-      --bg-color: #121212;
-      --card-bg: #1e1e1e;
-      --contact-blue: #0077b5;
-      --text-color: #e0e0e0;
-      --text-muted: #a0a0a0;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background-color: #181818;
-      border-bottom: 1px solid #2a2a2a;
-    }
-    .logo {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #fff;
-    }
-    nav {
-      display: flex;
-      gap: 15px;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--text-muted);
-      padding: 8px 16px;
-      border-radius: 5px;
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    nav a:hover {
-      color: #fff;
-      background-color: #2a2a2a;
-    }
-    /* Highlighted Selected State for Contact */
-    nav a.active {
-      color: #fff;
-      background-color: var(--contact-blue);
-    }
-
-    .card {
-      background-color: var(--card-bg);
-      padding: 25px;
-      border-radius: 8px;
-      margin-bottom: 25px;
-      border: 1px solid #2a2a2a;
-    }
-    h2 {
-      border-bottom: 2px solid var(--contact-blue);
-      padding-bottom: 8px;
-      margin-top: 0;
-      color: #fff;
-    }
-    .contact-list {
-      list-style: none;
-      padding: 0;
-    }
-    .contact-list li {
-      margin-bottom: 15px;
-      font-size: 1.1rem;
-    }
-    .contact-list a {
-      color: #4da6ff;
-      text-decoration: none;
-    }
-    .contact-list a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <!-- CHANGED: Linked external style.css stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <div class="logo">Dario</div>
+    <!-- CHANGED: Removed "Dario" text and added logo placeholder -->
+    <a href="index.html" class="logo" title="Home">
+      <!-- <img src="logo.png" alt="Logo" /> -->
+      <div class="logo-icon-fallback">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="6" width="20" height="12" rx="2"/>
+          <path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"/>
+        </svg>
+      </div>
+    </a>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="portfolio.html">Portfolio</a>
-      <!-- CHANGED: Active highlight set on Contact -->
-      <a href="contact.html" class="active">Contact</a>
+      <!-- CHANGED: Applied active-contact CSS class -->
+      <a href="contact.html" class="active-contact">Contact</a>
     </nav>
   </header>
 
   <div class="container">
-    <h1 style="color: #fff;">Connect with Me</h1>
+    <h1 style="color: #fff; margin-bottom: 25px;">Connect with Me</h1>
 
     <div class="card">
       <h2>Contact Details</h2>
